@@ -1,10 +1,2 @@
-
-function submitQuiz(){
- let score=0;
- document.querySelectorAll('input[type=radio]:checked').forEach(x=>{
-   score += Number(x.value);
- });
- let name=document.getElementById('name').value || 'Student';
- document.getElementById('result').innerHTML =
- `${name}, your score is ${score}/2.<br>Correct answers: Q1 Listening, Q2 True`;
-}
+const questions=[['My father wants me to become a doctor, ____ I want to become a designer.',['but','so','and','or'],0],['It is a challenging task, ____ it takes me a lot of time to do it.',['and','but','so','or'],2],['Should I stay in and watch TV ____ should I hang out with friends today?',['but','or','so','for'],1],['There are many festivals in Vietnam ____ many of them are held in the spring.',['and','but','or','so'],0],['Did you stay at home last night ____ did you go out with your friends?',['and','or','but','for'],1],['I must sleep early tonight. I turn on Do Not Disturb mode on my smartphone. (so)',['I must sleep early tonight, so I turn on Do Not Disturb mode on my smartphone.','Wrong','Wrong','Wrong'],0]];
+let q=document.getElementById('quiz');questions.forEach((x,i)=>{q.innerHTML+=`<div class=question><p>${i+1}. ${x[0]}</p>`+x[1].map((a,j)=>`<label><input type=radio name=q${i} value=${j}>${a}</label><br>`).join('')+'</div>'});function submitQuiz(){let s=0;questions.forEach((x,i)=>{let a=document.querySelector('input[name=q'+i+']:checked');if(a&&+a.value===x[2])s++});document.getElementById('result').innerHTML='Score: '+s+'/'+questions.length}

@@ -1,6 +1,1 @@
-
-body {font-family: Arial; background:#eef6ff;}
-.container {max-width:700px;margin:30px auto;background:white;padding:25px;border-radius:12px;}
-input {margin:8px;}
-button {background:#1976d2;color:white;padding:10px 25px;border:0;border-radius:8px;}
-#result {margin-top:20px;font-weight:bold;}
+body{font-family:Arial;background:#eef6ff}.container{max-width:800px;margin:30px auto;background:white;padding:25px;border-radius:15px}h1{color:#0b63ce}.question{margin:15px;padding:15px;background:#f5faff}button{background:#0b63ce;color:white;padding:10px 25px;border:0;border-radius:8px}
